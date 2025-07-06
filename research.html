@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMEWO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ヘッダー部分 -->
+    <header>
+        <!--<h1>DOMEWO</h1>-->
+        <img src="https://pbs.twimg.com/profile_images/1925796484189974528/CmEyKeVy_200x200.jpg" alt="代替テキスト">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+
+    <!-- ナビゲーションバー（左固定 or モバイル全画面） -->
+    <nav class="side-nav" id="nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <!--
+            <li><a href="#20">20</a></li>
+            -->
+            <li><a href="#2025">2025</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <section class="news-section">
+            <h2 id="news-section">PUBLICATIONS</h2>
+            <!--
+                <li>
+                    <a href="#">
+                        <div class="news-meta">
+                            <span class="news-new">NEW</span>
+                            <h3><time datetime="2025-">2025.</time></h3>
+                        </div>
+                        <div class="news-title"></div>
+
+                    </a>
+                </li>
+            -->
+        </section>
+
+
+
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <small>&copy; DOMEWO All rights reserved</small>
+    </footer>
+
+    <!-- メニュー開閉用 JavaScript -->
+    <script>
+        const nav = document.getElementById("nav");
+        const menuBtn = document.getElementById("menu-toggle");
+
+        // メニュー開閉処理
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+
+            // アイコン変更 ☰ <=> ✕
+            if (nav.classList.contains("open")) {
+                menuBtn.textContent = "✕";
+            } else {
+                menuBtn.textContent = "☰";
+            }
+        });
+
+        // ナビ内リンクをクリックしたら自動で閉じる
+        const navLinks = nav.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                menuBtn.textContent = "☰";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

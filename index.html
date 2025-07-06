@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMEWO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ヘッダー部分 -->
+    <header>
+        <!--<h1>DOMEWO</h1>-->
+        <img src="https://pbs.twimg.com/profile_images/1925796484189974528/CmEyKeVy_200x200.jpg" alt="代替テキスト">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+
+    <!-- ナビゲーションバー（左固定 or モバイル全画面） -->
+    <nav class="side-nav" id="nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#news-section">NEWS</a></li>
+            <li><a href="#research-section">RESEARCH</a></li>
+            <li><a href="#music-section">MUSIC</a></li>
+            <li><a href="#originalmovie-section">ORIGINAL MOVIES</a></li>
+            <li><a href="#covervideo-section">COVER VIDEOS</a></li>
+            <li><a href="#profile-section">PROFILE</a></li>
+            <li><a href="#account-section">ACCOUNTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <section class="news-section">
+            <h2 id="news-section">NEWS</h2>
+            <ul class="news-list">
+                <!--
+                <li>
+                    <a href="#">
+                        <div class="news-meta">
+                            <span class="news-new">NEW</span>
+                            <time datetime="2025-">2025.</time>
+                        </div>
+                        <div class="news-title"></div>
+                        <div class="news-arrow"></div>
+                    </a>
+                </li>
+                -->
+                <li>
+                    <a href="index.html">
+                        <div class="news-meta">
+                            <span class="news-new">NEW</span>
+                            <time datetime="2025-07-06">2025.7.6</time></h4>
+                        </div>
+                        <div class="news-title">ページを開設しました</div>
+                        <div class="news-arrow">➤</div>
+                    </a>
+                </li>
+            </ul>
+            <div class="wrapper">
+                <a href="news.html">
+                    <button>MORE</button>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="work-section">
+            <h2 id="research-section">RESEARCH</h2>
+            <h3>聴覚と発話の相互作用</h3>
+            <p>遅延聴覚フィードバック</p>
+
+            <a href="research.html">
+                <button style="font-size: 1rem;">MORE</button>
+            </a>
+        </section>
+
+        <section class="work-section">
+            <h2 id="music-section">MUSIC</h2>
+            <p>in preparation</p>
+        </section>
+
+
+        <section class="video-section">
+            <h2 id="originalmovie-section">ORIGINAL MOVIES</h2>
+            <p>in preparation</p>
+        </section>
+
+        <section class="video-section">
+            <h2 id="covervideo-section">COVER VIDEOS</h2>
+            <div class="scroll-container">
+                <!--
+            <a href="" class="card-link">
+                <div class="card">
+                    <img src="">
+                    <div class="overlay-text">
+                        <div class="wrapper">
+                            <h1>▶</h1>
+                        </div>
+                        <p>題名</p>
+                    </div>
+                </div>
+            </a>
+            -->
+
+                <a href="https://youtu.be/J8ShePbXK0A?si=046vzaChScxa2sBg" class="card-link">
+                    <div class="card">
+                        <img src="http://img.youtube.com/vi/J8ShePbXK0A/hqdefault.jpg">
+                        <div class="overlay-text">
+                            <div class="wrapper">
+                                <h1>▶</h1>
+                            </div>
+                            <p>ラ・カンパネラ</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/LwhhioOTLJg?si=vlIfGjuDcRdBN0YL" class="card-link">
+                    <div class="card">
+                        <img src="http://img.youtube.com/vi/LwhhioOTLJg/hqdefault.jpg" alt="戦場のメリークリスマス">
+                        <div class="overlay-text">
+                            <div class="wrapper">
+                                <h1>▶</h1>
+                            </div>
+                            <p>戦場のメリークリスマス</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <h2 id="profile-section">PROFILE</h2>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('musician')">DOMEWO</button>
+                    <button class="tab-btn" onclick="showTab('student')">----</button>
+                </div>
+
+                <div class="tab-content" id="musician">
+                    <h3>DOMEWO</h3>
+                    <p>in preparation</p>
+                </div>
+
+                <div class="tab-content" id="student" style="display: none;">
+                    <h3>----</h3>
+                    <p>in preparation</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="account-section">
+            <h2 id="account-section">ACCOUNTS</h2>
+            <div class="wrapper">
+                <div class="sns-links">
+                    <a href="https://youtube.com/@domewo" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/@domew0" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/domew.o" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <small>&copy; DOMEWO All rights reserved</small>
+    </footer>
+
+    <!-- メニュー開閉用 JavaScript -->
+    <script>
+        const nav = document.getElementById("nav");
+        const menuBtn = document.getElementById("menu-toggle");
+
+        // メニュー開閉処理
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+
+            // アイコン変更 ☰ <=> ✕
+            if (nav.classList.contains("open")) {
+                menuBtn.textContent = "✕";
+            } else {
+                menuBtn.textContent = "☰";
+            }
+        });
+
+        // ナビ内リンクをクリックしたら自動で閉じる
+        const navLinks = nav.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                menuBtn.textContent = "☰";
+            });
+        });
+
+        function showTab(tabId) {
+            // 全てのタブコンテンツを非表示
+            document.querySelectorAll('.tab-content').forEach(function (el) {
+                el.style.display = 'none';
+            });
+
+            // 全てのボタンから active を外す
+            document.querySelectorAll('.tab-btn').forEach(function (btn) {
+                btn.classList.remove('active');
+            });
+
+            // 表示したいタブを表示
+            document.getElementById(tabId).style.display = 'block';
+
+            // 押したボタンに active を付与
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>

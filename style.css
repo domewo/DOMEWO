@@ -1,0 +1,482 @@
+/* =========================================================
+  📄  Global Reset & Base
+========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    /* 横方向に中央 */
+    align-items: center;
+    /* 縦方向に中央（高さも必要） */
+    height: 20vh;
+}
+
+
+
+
+/* =========================================================
+  🖥  Desktop / 📱 Mobile 共通レイアウト要素
+========================================================= */
+
+/* ---------- Header（上部バー：モバイルでのみ使用） ---------- */
+header {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.5rem;
+    background: #ffffff;
+    color: #000000;
+    padding: 1rem 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 900;
+    position: relative;
+}
+
+/* ハンバーガーボタン（モバイル時のみ表示） */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+}
+
+.menu-toggle.open {
+    transform: rotate(90deg);
+}
+
+
+
+/* ---------- 左固定サイドナビ（PC）＋ モバイル時右側オーバーレイ ---------- */
+.side-nav {
+    font-family: 'Impact', sans-serif;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 10rem 2rem;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    background: none;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav a {
+    display: block;
+    padding: 0.8rem 0;
+    color: #222;
+    text-decoration: none;
+}
+
+.side-nav a:hover,
+.side-nav a:focus {
+
+    background: #000000;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.side-nav a.active {
+    font-weight: bold;
+    border-left: 4px solid #333;
+    padding-left: 0.6rem;
+}
+
+
+/* ---------- メインコンテンツ ---------- */
+main {
+    padding: 2rem;
+    margin-left: 0;
+    /* PC でサイドナビ分あける */
+    background: #fff;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem;
+    background: #eee;
+    margin-top: 2rem;
+}
+
+/* =========================================================
+  各セクション
+========================================================= */
+
+/* ---------- news　セクション ---------- */
+.news-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    border-bottom: 1px solid #ccc;
+}
+
+.news-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.news-meta {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    font-size: 0.9rem;
+}
+
+.news-new {
+    color: red;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.news-title {
+    flex: 1;
+    padding: 0 1rem;
+    font-size: 0.95rem;
+}
+
+.news-arrow {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* ---------- work　セクション ---------- */
+.work-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.work-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- video　セクション ---------- */
+.video-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- profile　セクション ---------- */
+.profile-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: #444;
+    color: white;
+}
+
+.tab-content {
+    transition: opacity 0.3s ease;
+}
+
+
+
+/* ---------- accounts　セクション ---------- */
+.account-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.account-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+  🎨  Components
+========================================================= */
+
+/* ---------- 汎用ボタン ---------- */
+button {
+    font-family: 'Impact', sans-serif;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #000000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+/* ---------- カード ---------- */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    position: relative;
+    flex-shrink: 0;
+    width: 480px;
+    height: 270px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s, box-shadow 0.15s;
+    scroll-snap-align: start;
+}
+
+.card-link:hover .card,
+.card-link:focus .card {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 画像＋オーバーレイ文字 */
+.card img,
+.card-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 480px;
+    height: 270px;
+    padding: 0.6em 1em;
+    border-radius: 6px;
+    opacity: 0;
+    /* 初期は非表示 */
+    pointer-events: none;
+    /* マウスイベント透過 */
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay-text {
+    opacity: 1;
+    /* ホバー時に表示 */
+}
+
+/* ---------- 横スクロールコンテナ ---------- */
+.scroll-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------- SNS 丸アイコンリンク ---------- */
+.sns-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    margin: 3rem;
+    border-radius: 50%;
+    background: #000000;
+    color: #fff;
+    font-size: 40px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.sns-links a:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+/* =========================================================
+  📱  Mobile (<950px)  —  レイアウト切り替え
+========================================================= */
+@media (max-width: 950px) {
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    /* ハンバーガーアイコン表示 */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1100;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+
+    /* サイドナビを画面外に隠す */
+    .side-nav {
+        left: auto;
+        right: 0;
+        top: 6rem;
+        transform: translateX(100%);
+        width: 220px;
+        height: 100vh;
+        background: none;
+        padding: 2rem 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    /* メニューが開いた状態（JSで .open を付与） */
+    .side-nav.open {
+        transform: translateX(0);
+    }
+
+    /* メインを全幅表示（ナビ幅を除かない） */
+    main {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    /* サイドナビ内リンク選択時に閉じる（JSで処理） */
+    .side-nav a {
+        color: #00bfff;
+        cursor: pointer;
+    }
+
+
+    /* SNS アイコン少し拡大 */
+    .sns-links a {
+        width: 90px;
+        height: 90px;
+        font-size: 35px;
+        margin: 1rem;
+    }
+
+    .card {
+
+        width: 320px;
+        height: 180px;
+    }
+
+    /* =========================================================
+  　各セクションの切り替え
+    ========================================================= */
+    /* ---------- news section ---------- */
+
+    .news-list a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-title {
+        padding: 0.5rem 0 0 0;
+    }
+
+    .news-arrow {
+        align-self: flex-end;
+        margin-top: 0.5rem;
+    }
+
+
+
+
+}
