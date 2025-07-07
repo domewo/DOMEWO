@@ -21,7 +21,7 @@ body {
     /* 横方向に中央 */
     align-items: center;
     /* 縦方向に中央（高さも必要） */
-    height: 20vh;
+    height: 40vh;
 }
 
 
@@ -72,8 +72,8 @@ header {
     left: 0;
     top: 0;
     width: 220px;
-    height: 100vh;
-    padding: 10rem 2rem;
+    height: 200vh;
+    padding: 5rem 2rem;
     overflow-y: auto;
     z-index: 1000;
     transition: transform 0.3s ease;
@@ -130,7 +130,7 @@ footer {
 
 /* ---------- news　セクション ---------- */
 .news-section {
-    padding: 2rem;
+    padding: 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -187,7 +187,7 @@ footer {
 
 /* ---------- work　セクション ---------- */
 .work-section {
-    padding: 2rem;
+    padding: 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -201,7 +201,7 @@ footer {
 
 /* ---------- video　セクション ---------- */
 .video-section {
-    padding: 2rem;
+    padding: 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -215,7 +215,7 @@ footer {
 
 /* ---------- profile　セクション ---------- */
 .profile-section {
-    padding: 2rem;
+    padding: 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -256,7 +256,7 @@ footer {
 
 /* ---------- accounts　セクション ---------- */
 .account-section {
-    padding: 2rem;
+    padding: 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -462,6 +462,11 @@ button:hover {
     ========================================================= */
     /* ---------- news section ---------- */
 
+    .news-section {
+        padding: 2rem;
+
+    }
+
     .news-list a {
         flex-direction: column;
         align-items: flex-start;
@@ -476,6 +481,25 @@ button:hover {
         margin-top: 0.5rem;
     }
 
+    /* ---------- work　セクション ---------- */
+    .work-section {
+        padding: 2rem;
+    }
+
+    /* ---------- video　セクション ---------- */
+    .video-section {
+        padding: 2rem;
+    }
+
+    /* ---------- profile　セクション ---------- */
+    .profile-section {
+        padding: 2rem;
+    }
+
+    /* ---------- accounts　セクション ---------- */
+    .account-section {
+        padding: 2rem;
+    }
 
 
 
