@@ -130,7 +130,7 @@ footer {
 
 /* ---------- news　セクション ---------- */
 .news-section {
-    padding: 8rem;
+    padding: 0 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -187,7 +187,7 @@ footer {
 
 /* ---------- work　セクション ---------- */
 .work-section {
-    padding: 8rem;
+    padding: 3rem 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -201,7 +201,7 @@ footer {
 
 /* ---------- video　セクション ---------- */
 .video-section {
-    padding: 8rem;
+    padding: 3rem 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -215,7 +215,7 @@ footer {
 
 /* ---------- profile　セクション ---------- */
 .profile-section {
-    padding: 8rem;
+    padding: 3rem 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -256,7 +256,7 @@ footer {
 
 /* ---------- accounts　セクション ---------- */
 .account-section {
-    padding: 8rem;
+    padding: 3rem 8rem;
     max-width: 1000px;
     margin: 0 auto;
 }
