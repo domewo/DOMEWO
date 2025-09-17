@@ -10,31 +10,30 @@
 </head>
 
 <body>
-    <!-- ヘッダー部分 -->
+    <!-- ヘッダー -->
     <header>
-        <!--<h1>DOMEWO</h1>-->
-        <img src="https://pbs.twimg.com/profile_images/1925796484189974528/CmEyKeVy_200x200.jpg" alt="代替テキスト">
+        <img src="photos/domewo_logo.jpg" alt="DOMEWO ロゴ" width="200" height="200">
         <button class="menu-toggle" id="menu-toggle">☰</button>
     </header>
 
-    <!-- ナビゲーションバー（左固定 or モバイル全画面） -->
+    <!-- ナビゲーション -->
     <nav class="side-nav" id="nav">
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="#news-section">NEWS</a></li>
-            <li><a href="#research-section">RESEARCH</a></li>
-            <li><a href="#music-section">MUSIC</a></li>
-            <li><a href="#originalmovie-section">ORIGINAL </a></li>
-            <li><a href="#covervideo-section">COVER</a></li>
             <li><a href="#profile-section">PROFILE</a></li>
+            <li><a href="#profile-section" data-tab="researcher" data-target="research-section">RESEARCH</a></li>
+            <li><a href="#profile-section" data-tab="musician" data-target="music-section">MUSIC</a></li>
+            <li><a href="#profile-section" data-tab="musician" data-target="video-section">VIDEO</a></li>
             <li><a href="#account-section">ACCOUNTS</a></li>
         </ul>
     </nav>
 
-    <!-- メインコンテンツ -->
+    <!-- メイン -->
     <main>
-        <section class="news-section">
-            <h2 id="news-section">NEWS</h2>
+        <!-- NEWS -->
+        <section id="news-section" class="news-section">
+            <h2>NEWS</h2>
             <ul class="news-list">
                 <!--
                 <li>
@@ -44,131 +43,176 @@
                             <time datetime="2025-">2025.</time>
                         </div>
                         <div class="news-title"></div>
-                        <div class="news-arrow"></div>
+                        <div class="news-arrow">➤</div>
                     </a>
                 </li>
                 -->
+
+                <li>
+                    <a href="https://acoustics.jp/cms/wp_asj/wp-content/uploads/009_2025autumn_program.pdf">
+                        <div class="news-meta">
+                            <span class="news-new">NEW</span>
+                            <time datetime="2025-09-12">2025.9.12</time>
+                        </div>
+                        <div class="news-title">日本音響学会第154回研究発表会においてポスター発表を行いました（3-Q-35）</div>
+                        <div class="news-arrow">➤</div>
+                    </a>
+                </li>
                 <li>
                     <a href="index.html">
                         <div class="news-meta">
-                            <span class="news-new">NEW</span>
-                            <time datetime="2025-07-06">2025.7.6</time></h4>
+                            <time datetime="2025-07-06">2025.7.6</time>
                         </div>
                         <div class="news-title">ページを開設しました</div>
                         <div class="news-arrow">➤</div>
                     </a>
                 </li>
             </ul>
-            <div class="wrapper" style="height: 20vh;">
-                <a href="news.html">
-                    <button>MORE</button>
-                </a>
-
+            <div class="wrapper">
+                <a href="news.html"><button>MORE</button></a>
             </div>
         </section>
 
-        <section class="work-section">
-            <h2 id="research-section">RESEARCH</h2>
-            <h3>聴覚と発話の相互作用</h3>
-            <p>遅延聴覚フィードバック</p>
+        <!-- PROFILE -->
+        <section id="profile-section" class="profile-section">
+            <h2>PROFILE</h2>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('researcher')">Kazuto Fukudome</button>
+                    <button class="tab-btn" onclick="showTab('musician')">DOMEWO</button>
+                </div>
 
-            <a href="research.html">
-                <button style="font-size: 1rem;">MORE</button>
-            </a>
-        </section>
+                <!-- researcher -->
+                <div class="tab-content" id="researcher">
+                    <h3>福留 和杜（Kazuto Fukudome）</h3>
+                    <p>九州工業大学　工学部　電気電子工学科　水町研究室</p>
 
-        <section class="work-section">
-            <h2 id="music-section">MUSIC</h2>
-            <p>in preparation</p>
-        </section>
+                    <section id="research-section" class="work-section">
+                        <h2>RESEARCH</h2>
+                        <h3>聴覚と発話の相互作用</h3>
+                        <p>遅延聴覚フィードバック</p>
+                        <p>ロンバード効果</p>
+                        <a href="research.html"><button>MORE</button></a>
+                    </section>
+
+                    <h4>経歴</h4>
+                    <p>April 2022 ~ </p>
+                    <p>　　　　　　　九州工業大学 工学部 電気電子工学科</p>
+                    <p>March 2022</p>
+                    <p>　　　　　　　福岡大学付属大濠高等学校卒業</p>
+                </div>
+
+                <!-- Musician -->
+                <div class="tab-content" id="musician" style="display: none;">
+                    <h3>DOMEWO</h3>
+                    <p>自己表現の一環として音楽をやっています</p>
+
+                    <section id="music-section" class="work-section">
+                        <h2>MUSIC</h2>
+                        <div class="album-scroll">
+                            <!--
+                            <div class="album-card" data-title="Anothor" data-links='[ 
+                            {"name":"SoundCloud","url":"https://soundcloud.com/domewo/another", "type":"soundcloud"},
+                            {"name":"YouTube","url":"https://youtu.be/GnCypStCY-A", "type":"youtube"}
+                            ]'>
+                                <img src="another_jacket.jpg" alt="Another Song">
+                                <p>Another Song</p>
+                            </div>
+                            -->
+                            <div class="album-card" data-title="Iteration" data-links='[ 
+                            {"name":"SoundCloud","url":"https://soundcloud.com/domewo/iteration"},
+                            {"name":"YouTube","url":"https://music.youtube.com/watch?v=GnCypStCY-A"}
+                            ]'>
+                                <img src="photos/Iteration.jpg" alt="Iteration">
+                                <p>Iteration</p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- モーダル -->
+                    <div id="album-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h3 id="modal-title"></h3>
+                            <div id="modal-links" class="sns-links"></div> <!-- SNSアイコンが入る -->
+                        </div>
+                    </div>
 
 
-        <section class="video-section">
-            <h2 id="originalmovie-section">ORIGINAL MOVIES</h2>
-            <p>in preparation</p>
-        </section>
 
-        <section class="video-section">
-        <h2 id="covervideo-section">COVER VIDEOS</h2>
-            <div class="scroll-container">
-                <!--
-            <a href="" class="card-link">
-                <div class="card">
-                    <img src="">
-                    <div class="overlay-text">
+                    <section id="video-section" class="video-section">
+                        <h2>VIDEOS</h2>
+                        <div class="scroll-container">
+                            <!--
+                        <a href="" class="card-link">
+                        <div class="card">
+                        <img src="">
+                        <div class="overlay-text">
                         <p>　</p>
                         <p>　</p>
                         <h1 style="text-align: center;">▶</h1>
                         <p>題名</p>
-                    </div>
-                </div>
-            </a>
-            -->
-
-                <a href="https://youtu.be/J8ShePbXK0A?si=046vzaChScxa2sBg" class="card-link">
-                    <div class="card">
-                        <img src="http://img.youtube.com/vi/J8ShePbXK0A/hqdefault.jpg">
-                        <div class="overlay-text">
-                            <p>　</p>
-                            <p>　</p>
-                            <h1 style="text-align: center;">▶</h1>
-                            <p>ラ・カンパネラ</p>
                         </div>
-                    </div>
-                </a>
-
-                <a href="https://youtu.be/LwhhioOTLJg?si=vlIfGjuDcRdBN0YL" class="card-link">
-                    <div class="card">
-                        <img src="http://img.youtube.com/vi/LwhhioOTLJg/hqdefault.jpg" alt="戦場のメリークリスマス">
-                        <div class="overlay-text">
-                            <p>　</p>
-                            <p>　</p>
-                            <h1 style="text-align: center;">▶</h1>
-                            <p>戦場のメリークリスマス</p>
                         </div>
-                    </div>
-                </a>
+                        </a>
+                        -->
+                            <a href="https://youtu.be/GnCypStCY-A?si=9PLpyFviEp66tE3i" class="card-link">
+                                <div class="card">
+                                    <img src="http://img.youtube.com/vi/GnCypStCY-A/hqdefault.jpg" alt="Iteration">
+                                    <div class="overlay-text">
+                                        <p>　</p>
+                                        <p>　</p>
+                                        <h1>▶</h1>
+                                        <p>Iteration</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/J8ShePbXK0A?si=046vzaChScxa2sBg" class="card-link">
+                                <div class="card">
+                                    <img src="http://img.youtube.com/vi/J8ShePbXK0A/hqdefault.jpg" alt="ラ・カンパネラ">
+                                    <div class="overlay-text">
+                                        <p>　</p>
+                                        <p>　</p>
+                                        <h1>▶</h1>
+                                        <p>ラ・カンパネラ</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://youtu.be/LwhhioOTLJg?si=vlIfGjuDcRdBN0YL" class="card-link">
+                                <div class="card">
+                                    <img src="http://img.youtube.com/vi/LwhhioOTLJg/hqdefault.jpg" alt="戦場のメリークリスマス">
+                                    <div class="overlay-text">
+                                        <p>　</p>
+                                        <p>　</p>
+                                        <h1>▶</h1>
+                                        <p>戦場のメリークリスマス</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+
             </div>
         </section>
 
-        <section class="profile-section">
-            <h2 id="profile-section">PROFILE</h2>
-            <div class="tab-container">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" onclick="showTab('musician')">DOMEWO</button>
-                    <button class="tab-btn" onclick="showTab('student')">----</button>
-                </div>
 
-                <div class="tab-content" id="musician">
-                    <h3>DOMEWO</h3>
-                    <p>in preparation</p>
-                </div>
-
-                <div class="tab-content" id="student" style="display: none;">
-                    <h3>----</h3>
-                    <p>in preparation</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="account-section">
-            <h2 id="account-section">ACCOUNTS</h2>
-            <div class="wrapper">
-                <div class="sns-links">
-                    <a href="https://youtube.com/@domewo" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="https://twitter.com/@domew0" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://instagram.com/domew.o" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
+        <!-- ACCOUNTS -->
+        <section id="account-section" class="account-section">
+            <h2>ACCOUNTS</h2>
+            <div class="sns-links">
+                <a href="https://twitter.com/@domew0" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/domewo.0" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@domewo" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://soundcloud.com/domewo" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-soundcloud"></i></a>
             </div>
         </section>
-
     </main>
 
     <!-- フッター -->
@@ -176,51 +220,101 @@
         <small>&copy; DOMEWO All rights reserved</small>
     </footer>
 
-    <!-- メニュー開閉用 JavaScript -->
+    <!-- JavaScript -->
     <script>
         const nav = document.getElementById("nav");
         const menuBtn = document.getElementById("menu-toggle");
 
-        // メニュー開閉処理
         menuBtn.addEventListener("click", () => {
             nav.classList.toggle("open");
-
-            // アイコン変更 ☰ <=> ✕
-            if (nav.classList.contains("open")) {
-                menuBtn.textContent = "✕";
-            } else {
-                menuBtn.textContent = "☰";
-            }
+            menuBtn.textContent = nav.classList.contains("open") ? "✕" : "☰";
         });
 
-        // ナビ内リンクをクリックしたら自動で閉じる
         const navLinks = nav.querySelectorAll("a");
         navLinks.forEach(link => {
             link.addEventListener("click", () => {
+
+                const tab = link.dataset.tab;
+                const target = link.dataset.target;
+
+                // タブ指定がある場合は切り替え
+                if (tab) {
+                    showTab(tab);
+                    setTimeout(() => {
+                        if (target) {
+                            document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+                        } else {
+                            document.getElementById(tab).scrollIntoView({ behavior: "smooth" });
+                        }
+                    }, 100); // タブ切り替え描画後にスクロール
+                }
                 nav.classList.remove("open");
                 menuBtn.textContent = "☰";
             });
         });
 
         function showTab(tabId) {
-            // 全てのタブコンテンツを非表示
-            document.querySelectorAll('.tab-content').forEach(function (el) {
-                el.style.display = 'none';
-            });
-
-            // 全てのボタンから active を外す
-            document.querySelectorAll('.tab-btn').forEach(function (btn) {
-                btn.classList.remove('active');
-            });
-
-            // 表示したいタブを表示
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(tabId).style.display = 'block';
 
-            // 押したボタンに active を付与
-            event.currentTarget.classList.add('active');
+            // ボタンのactive付け替え
+            document.querySelector(`.tab-btn[onclick*="${tabId}"]`)?.classList.add('active');
+            //event.currentTarget.classList.add('active');
         }
-    </script>
 
+
+        // Album modal
+        const modal = document.getElementById("album-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalLinksContainer = document.getElementById("modal-links");
+        const closeBtn = document.querySelector(".close");
+
+        // サービス名 → FontAwesome アイコンの対応表
+        const iconMap = {
+            "YouTube": "fa-brands fa-youtube",
+            "SoundCloud": "fa-brands fa-soundcloud",
+            "Twitter": "fa-brands fa-x-twitter",
+            "Instagram": "fa-brands fa-instagram",
+            "Spotify": "fa-brands fa-spotify",
+            "Bandcamp": "fa-brands fa-bandcamp",
+            "AppleMusic": "fa-brands fa-apple",
+            "Default": "fa-solid fa-link" // 対応がないときのフォールバック
+        };
+
+        document.querySelectorAll(".album-card").forEach(card => {
+            card.addEventListener("click", () => {
+                modalTitle.textContent = card.dataset.title;
+                modalLinksContainer.innerHTML = ""; // 前回のリンクをクリア
+
+                const links = JSON.parse(card.dataset.links);
+                links.forEach(link => {
+                    const a = document.createElement("a");
+                    a.href = link.url;
+                    a.target = "_blank";
+                    a.rel = "noopener";
+
+                    // アイコンを入れる
+                    const i = document.createElement("i");
+                    i.className = iconMap[link.name] || iconMap["Default"];
+                    a.appendChild(i);
+
+                    modalLinksContainer.appendChild(a);
+                });
+
+                modal.style.display = "flex";
+            });
+        });
+
+        closeBtn.addEventListener("click", () => modal.style.display = "none");
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
