@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMEWO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <img src="photos/domewo_logo.jpg" alt="DOMEWO ロゴ" width="200" height="200">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+
+    <!-- ナビゲーション -->
+    <nav class="side-nav" id="nav">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#DAF-section">DAF</a></li>
+            <li><a href="#Lombard-section">LOMBARD</a></li>
+            <li><a href="#account-section">ACCOUNTS</a></li>
+        </ul>
+    </nav>
+
+    <!-- メイン -->
+    <main>
+        <!-- RESEARCH -->
+        <section class="profile-section">
+            <h2>RESEARCH</h2>
+            <div>
+                <h3>聴覚と発話の相互作用</h3>
+                <ul>
+                    <p id="DAF-section">遅延聴覚フィードバック</p>
+                    <p id="Lombard-section">ロンバード効果</p>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- ACCOUNTS -->
+        <section id="account-section" class="account-section">
+            <h2>ACCOUNTS</h2>
+            <div class="sns-links">
+                <a href="https://twitter.com/@domew0" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com/domewo.0" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@domewo" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://soundcloud.com/domewo" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-soundcloud"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <small>&copy; DOMEWO All rights reserved</small>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const nav = document.getElementById("nav");
+        const menuBtn = document.getElementById("menu-toggle");
+
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            menuBtn.textContent = nav.classList.contains("open") ? "✕" : "☰";
+        });
+
+        const navLinks = nav.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+
+                const tab = link.dataset.tab;
+                const target = link.dataset.target;
+
+                // タブ指定がある場合は切り替え
+                if (tab) {
+                    showTab(tab);
+                    setTimeout(() => {
+                        if (target) {
+                            document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+                        } else {
+                            document.getElementById(tab).scrollIntoView({ behavior: "smooth" });
+                        }
+                    }, 100); // タブ切り替え描画後にスクロール
+                }
+                nav.classList.remove("open");
+                menuBtn.textContent = "☰";
+            });
+        });
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabId).style.display = 'block';
+
+            // ボタンのactive付け替え
+            document.querySelector(`.tab-btn[onclick*="${tabId}"]`)?.classList.add('active');
+            //event.currentTarget.classList.add('active');
+        }
+
+
+
+    </script>
+</body>
+
+</html>
