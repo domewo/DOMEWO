@@ -131,8 +131,8 @@ footer {
 
 /* ---------- news　セクション ---------- */
 .news-section {
-    padding: 0 8rem;
-    max-width: 1300px;
+    padding: 0 12rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -144,6 +144,10 @@ footer {
 }
 
 .news-list {
+    max-height: 300px;
+    /* 高さを固定（1件あたりの高さに合わせて調整） */
+    overflow-y: auto;
+    /* 縦方向スクロールを許可 */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -151,6 +155,7 @@ footer {
 
 .news-list li {
     border-bottom: 1px solid #ccc;
+    padding: 10px;
 }
 
 .news-list a {
@@ -188,8 +193,8 @@ footer {
 
 /* ---------- profile　セクション ---------- */
 .profile-section {
-    padding: 0rem 8rem;
-    max-width: 1300px;
+    padding: 3rem 12rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -228,7 +233,7 @@ footer {
 /* ---------- work　セクション ---------- */
 .work-section {
     padding: 3rem 0rem;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -328,13 +333,10 @@ footer {
     background: #555;
 }
 
-
-
-
 /* ---------- video　セクション ---------- */
 .video-section {
     padding: 3rem 0rem;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -347,8 +349,8 @@ footer {
 
 /* ---------- accounts　セクション ---------- */
 .account-section {
-    padding: 3rem 8rem;
-    max-width: 1300px;
+    padding: 3rem 12rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -465,9 +467,9 @@ button:hover {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 110px;
-    height: 110px;
-    margin: 3rem;
+    width: 100px;
+    height: 100px;
+    margin: 2rem;
     border-radius: 50%;
     background: #000000;
     color: #fff;
