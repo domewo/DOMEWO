@@ -485,7 +485,7 @@ button:hover {
 /* =========================================================
   📱  Mobile (<950px)  —  レイアウト切り替え
 ========================================================= */
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     header {
         padding: 1rem 2rem;
@@ -574,19 +574,19 @@ button:hover {
         margin-top: 0.5rem;
     }
 
+    /* ---------- profile　セクション ---------- */
+    .profile-section {
+        padding: 2rem;
+    }
+  
     /* ---------- work　セクション ---------- */
     .work-section {
-        padding: 2rem;
+        padding: 0rem;
     }
 
     /* ---------- video　セクション ---------- */
     .video-section {
-        padding: 2rem;
-    }
-
-    /* ---------- profile　セクション ---------- */
-    .profile-section {
-        padding: 2rem;
+        padding: 0rem;
     }
 
     /* ---------- accounts　セクション ---------- */
@@ -597,3 +597,4 @@ button:hover {
 
 
 }
+
